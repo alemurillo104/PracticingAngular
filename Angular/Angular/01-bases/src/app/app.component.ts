@@ -1,10 +1,23 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector : 'app-root',
+  templateUrl : 'app.component.html'
 })
 export class AppComponent {
-  title = 'bases';
+  titulo   : string = 'Contador App';
+  contador : number = 0;
+  base     : number = 5;
+
+  acumular (valor : number){
+    this.contador += valor;
+  }
+  incrementar() : void {
+    this.contador++;
+  }
+
+  decrementar() : void {
+    this.contador--;
+  }
 }
